@@ -1,0 +1,33 @@
+<div class="row justify-content-center" >
+    <div class="col-12" style="max-height: 631px  ; max-width:1000px; overflow: auto;">
+    <table class="table" style="position: sticky;top: 0; box-shadow: 0px 0px 55px rgba(0, 0, 0, 0.06);">
+        <thead class="thead-dark" style="position: sticky;top: 0; height:69px; background: #004fff;
+       ">
+          <tr scope="row" style="position: sticky;top: 0; border-radius: 14px 14px 0px 0px; max-width: 919px;">
+            <th class="table-heading" style="color:white ;" scope="col">team Title</th>
+            <th class="table-heading" style="color:white ;" scope="col"> Post Date</th>
+            <th class="table-heading" style="color:white ;" scope="col">team Id</th>
+            <th class="table-heading" style="color:white ;" scope="col">team Subtitle</th>
+            <th class="table-heading" style="color:white ;" scope="col">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+         
+        
+         
+
+          <tr *ngFor="let teamMember of teamslistvar" style="height:80px; ">
+            <td class="table-content" >{{teamMember.teamName}}</td>
+            <td class="table-content" >{{teamMember._id}}</td>
+            <td class="table-content" >{{teamMember.teamDesignation}}</td>
+            <button class="btn btn-primary" (click)="deleteTeam(teamMember._id)">Delete</button>
+          </tr>
+          
+          
+          
+        </tbody>
+      </table>
+      
+      
+      </div> 
+</div>

@@ -1,0 +1,48 @@
+<div class="container d-flex flex-column ">
+   
+    <div class="container-fluid">
+        <div class="container-fluid d-flex flex-column justify-content-center" style="height: 374px ;">
+            <div class="container-fluid d-flex flex-column justify-content-between" style="height:174px ;">
+
+                <h1 class="mainHeading">{{blogName}}</h1>
+                <p class="subHeading">{{blogTitle}}</p>
+            </div>
+        </div>
+        <div class="container-fluid" style="width: 1042px;height: 642px;">
+            <img [src]="blogImage" alt="" style="height:100% ;width: 100%;object-fit: contain;">
+        </div>
+    </div>
+    <div class="container-fluid d-flex flex-column align-items-center p-0 blog-description "
+        style="max-width:700px;margin-top:34px ; ">
+        <div class="date w-100 d-flex flex-start" style="color: #004FFF;">
+            27 June, 2022
+        </div>
+        <div class="description " style="margin-top: 40px;">
+            {{blogDescription}}
+
+        </div>
+    </div>
+    <div style="height:110px ; border-bottom: 2px solid #dadada; margin-bottom: 40px;">
+        <h1 class="related-blogs">Related Blogs</h1>
+    </div>
+
+    <div class="container-fluid d-flex flex-wrap flex-row  justify-content-between" style="row-gap:30px;">
+        
+        <div *ngFor="let blog of relatedBlog |slice:0:3">
+
+        
+        <div class="card" style="border: none; width: 327px; background: #FFFFFF;">
+            <img src="../assets/blog1.png" style="border-radius: 0;" class="card-img-top" alt="...">
+            <div class="card-body p-0 pt-2">
+                <h6 class="card-title card-date">
+                    27 June, 2022
+                </h6>
+                <h5 class="card-title card-title2 ">
+                 {{relatedBlog.blogName}}</h5>
+                <p class="card-text card-text2">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Laoreet</p>
+            </div>
+        </div>
+       </div>
+       
+</div>

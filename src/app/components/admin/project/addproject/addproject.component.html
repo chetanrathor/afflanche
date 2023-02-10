@@ -1,0 +1,97 @@
+<div class="container" style="">
+  <div class="container-fluid" style="max-width: 976px">
+    <form #add="ngForm" (ngSubmit)="addProject(add.value)">
+      <div class="row align-content-center" style="height: 65px">
+        <h3 style="">Add Projectss</h3>
+      </div>
+      <div class="row align-content-center" style="height: 154px">
+        <h3 class="add-Projects-heading">Projects Image</h3>
+        <label for="imageupload">
+          <div class="uploader">
+            <img src="../assets/upload.png" class="img-style" />
+            <h3 class="upload-image-heading">Upload Image</h3>
+            <input
+              id="imageupload"
+              style="height: 100%; display: none; width: 100%"
+              src=""
+              alt=""
+              name="projectImage"
+             
+              type="file"
+              (input)="onImageUpload($event)"
+              ngModel
+            />
+          </div>
+        </label>
+      </div>
+      <div class="row">
+        <div
+          class="col-12 d-flex flex-column justify-content-between text-and-input-style"
+        >
+          <label for="Projects-title">Projects Title</label>
+          <input
+           
+            class="w-100 input-height"
+            type="text"
+            name="projectTitle"
+            id="Projects-title"
+            ngModel
+          />
+        </div>
+        <div class="row">
+          <div
+            class="col-12 d-flex flex-column justify-content-between text-and-input-style"
+          >
+            <label for="Projects-name">Projects Name</label>
+            <input
+           
+              class="w-100 input-height"
+              type="text"
+              name="projectName"
+              id="Projects-Name"
+              ngModel
+            />
+          </div>
+          <div class="row">
+            <div
+              class="col-12 d-flex flex-column justify-content-between text-and-input-style"
+            >
+              <label for="Projects-title">Projects Category</label>
+              <input
+                class="w-100 input-height"
+                type="text"
+                name="projectCategory"
+                id="Projects-title"
+             
+                ngModel
+              />
+            </div>
+            <div class="row">
+              <div
+                class="col-12 d-flex flex-column justify-content-between Projects-description"
+              >
+                <label for="Projects-description">Projects Description</label>
+                <input
+                  class="w-100 input-height2"
+                  type="text"
+                  name="projectDescription"
+                  id="Projects-description"
+                
+                 ngModel
+                />
+              </div>
+            </div>
+
+            <div class="row justify-content-end">
+              <div
+                class="col-3 d-flex flex-column justify-content-center button-container"
+              >
+                <input type="submit" name="submit" ngModel class="bt-style" value="Add Projects" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

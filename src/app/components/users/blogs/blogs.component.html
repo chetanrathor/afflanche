@@ -1,0 +1,31 @@
+<div class="container p-0" style="max-width:1042px;">
+    <div class="container-fluid p-0 d-flex flex-wrap flex-column" style="max-width:1042px ;">
+        <h1 class="primary-heading">Blogs</h1>
+        <p class="primary-sub-heading">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare id sed tincidunt
+            et volutpat consectetur
+            facilisis diam. Amet libero tristique ac nec proin</p>
+    </div>
+    <div class="container-fluid d-flex flex-wrap flex-row  justify-content-between" style="row-gap:30px;">
+        <div *ngFor="let blog of blogs">
+            <div class="card" style="border: none; width: 327px; background: #FFFFFF;">
+                <div style="width: 327px ;height: 204px;">
+
+                    <img src="{{blog.blogImage}}" style="border-radius: 0; width: 100%;height: 100%;object-fit: contain;" class="card-img-top" alt="...">
+                </div>
+                <div class="card-body p-0 pt-2">
+                    <a routerLink="blogdetails/{{blog._id}}" style="text-decoration:none ;">
+                    <h6 class="card-title card-date">
+                        {{blog.created_date}}
+                    </h6>
+                    <h5 class="card-title card-title2 ">
+                        {{blog.blogName}}</h5>
+                    <p class="card-text card-text2" style="max-height:90px ;overflow: hidden;">
+                      {{blog.blogTitle}}</p>
+                        </a>
+                </div>
+        </div>
+        </div>
+        
+    </div>
+</div>
+<!-- <router-outlet></router-outlet> -->
